@@ -19,5 +19,8 @@ module.exports = defineConfig({
       allureWriter(on, config);
       return config;
     },
+    env: {
+        allureReuseAfterSpec: true
+    }
   },
 });
