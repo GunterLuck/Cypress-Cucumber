@@ -12,7 +12,7 @@ Allur is used as a reporter in this project.
 
 Download or clone a project
 
-To clone a project with `GIT`, call `git clone https://github.com/GunterLuck/Telnyxtest.git`
+To clone a project with `GIT`, call `git clone https://github.com/GunterLuck/Cypress-Cucumber.git`
 
 To install dependencies , call `npm i`
 
