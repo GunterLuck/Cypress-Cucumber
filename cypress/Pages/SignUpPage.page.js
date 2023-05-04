@@ -17,17 +17,29 @@ class SignUpPage{
     submitTextMessage() {
         return cy.get('div[class]>p[class]')
     }
+    errorTextMessage() {
+        return cy.get('#email_message')
+    }
     applyPromoCodeButton() {
         return cy.get('a[aria-hidden]>span')
     }
     promoCodeField() {
         return cy.get('#promo_code')
     }
+    logInLinkButton() {
+        return cy.get('p>a[href*="telnyx"]')
+    }
+    telnyxsTermsLinkButton() {
+        return cy.get('[href="/terms-and-conditions-of-service"]').first()
+    }
+    privacyPolicyLinkButton() {
+        return cy.get('[href="/privacy-policy"]').first()
+    }
+    titleText() {
+        return cy.get('div>h1>span')
+    }
     enterEmailFieldValue(Email) {
         this.emailField().type(Email, { force: true })
-    }
-    checkEmailFieldForMachingValue(Email) {
-        this.emailField().should('have.value', Email)
     }
     enterFullNameFieldValue(Name) {
         this.fullNameField().type(Name)
@@ -46,11 +58,32 @@ class SignUpPage{
             this.submitTextMessage().eq(i).should('be.visible')
         }
     }
+    checkErrorTextMessageVisibility() {
+        this.errorTextMessage().should('be.visible')
+    }
     clickApplyPromoCodeButton() {
         this.applyPromoCodeButton().click()
     }
     enterPromoCodeFieldValue(Number) {
         this.promoCodeField().type(Number)
+    }
+    scrollToLogInLinkButton() {
+        this.logInLinkButton().scrollIntoView()
+    }
+    scrollTelnyxsTermsLinkButton() {
+        this.telnyxsTermsLinkButton().scrollIntoView()
+    }
+    clickLogInLinkButton() {
+        this.logInLinkButton().invoke('removeAttr', 'target').click()
+    }
+    clickTelnyxsTermsLinkButton() {
+        this.telnyxsTermsLinkButton().invoke('removeAttr', 'target').click({force: true})
+    }
+    clickPrivacyPolicyLinkButton() {
+        this.privacyPolicyLinkButton().invoke('removeAttr', 'target').click({force: true})
+    }
+    checkTitleTextVisibility() {
+        this.titleText().should('be.visible')
     }
 }
 

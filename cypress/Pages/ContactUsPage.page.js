@@ -9,7 +9,10 @@ class ContactUsPage{
         return cy.get('#Email')
     }
     countryDropdown() {
-        return cy.get('#Phone_Number_Extension__c')
+        return cy.get('[name="Phone_Number_Extension__c"]')
+    }
+    canadaOption() {
+        return cy.get('[value="+1"]').contains('Canada (+1)')
     }
     reasonForContactDropdown() {
         return cy.get('#Reason_for_Contact__c')
@@ -29,17 +32,14 @@ class ContactUsPage{
     submitMessageText() {
         return cy.get('h1>span')
     }
-    supportCenterButton() {
-        return cy.get('p>a[href="https://support.telnyx.com/en/"]')
-    }
     howDidYouHearAboutTelnyxField() {
         return cy.get('#How_did_you_hear_about_Telnyx_Open__c')
     }
     errorMesageText() {
         return cy.get('#ValidMsgReason_for_Contact__c')
     }
-    logInButton() {
-        return cy.get('a[title]').eq(1)
+    reportAbuseLinkButton() {
+        return cy.get('[href="https://telnyx.com/report-abuse"]>span').first()
     }
     selectSupportOptionInReasonForContactDropdown() {
         this.reasonForContactDropdown().select('Support')
@@ -77,17 +77,14 @@ class ContactUsPage{
     enterHowDidYouHearAboutTelnyxFieldValue(Text) {
         this.howDidYouHearAboutTelnyxField().type(Text)
     }
-    scrollToSupportCenterButton() {
-        this.supportCenterButton().scrollIntoView()
-    }
     checkErrorMesageTextVisibility() {
         this.errorMesageText().should('be.visible')
     }
-    clickLogInButton() {
-        this.logInButton().invoke('removeAttr', 'target').click()
+    scrollToReportAbuseLinkButton() {
+        this.reportAbuseLinkButton().scrollIntoView()
     }
-    scrollDownToLogInButton() {
-        this.logInButton().scrollIntoView()
+    clickReportAbuseLinkButton() {
+        this.reportAbuseLinkButton().click()
     }
 }
 

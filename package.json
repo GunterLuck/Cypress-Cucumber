@@ -21,7 +21,7 @@
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true,
     "nonGlobalStepBaseDir": "cypress/e2e",
-    "step_definitions": "cypress/support/step_definitions",
+    "step_definitions": "cypress/e2e",
     "json": {
       "enabled": true,
       "output": "jsonlogs/log.json",
