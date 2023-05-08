@@ -1,4 +1,4 @@
-# Cypress-Cucumber
+# Telnyx-Cypress-Cucumber-Test
 
 This project should do https://telnyx.com/ part of the main functionality tests on cypress-cucumber framework.
 
@@ -12,7 +12,7 @@ Allur is used as a reporter in this project.
 
 Download or clone a project
 
-To clone a project with `GIT`, call `git clone https://github.com/GunterLuck/Cypress-Cucumber.git`
+To clone a project with `GIT`, call `git clone https://github.com/GunterLuck/Telnyx-Cypress-Cucumber-Test.git`
 
 To install dependencies , call `npm i`
 
