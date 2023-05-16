@@ -1,5 +1,4 @@
 import { Given, When, Then, And } from "cypress-cucumber-preprocessor/steps"
-import MainPage from "../../Pages/MainPage.page";
 import CoockiesPage from "../../Pages/CoockiesPage.page";
 import SolutionsPage from "../../Pages/SolutionsPage.page";
 
@@ -8,20 +7,20 @@ Given('I am on the Telnyx page and confirm the cookies', () => {
     CoockiesPage.acceptCookies()
 })
 When('I click on "Solutions" button', () => {
-    MainPage.clickSolutionsButton()
+    SolutionsPage.clickSolutionsButton()
 })
-Then('I click on "See industries" button', () => {
+And('I click on "See industries" button', () => {
     SolutionsPage.clickSeeIndustriesButton()
 })
-And('I check "Healthcare" button visibility', () => {
+Then('I should see "Healthcare" button', () => {
     SolutionsPage.checkHealthcareButtonVisibility()
 })
-And('I scroll up to "See use cases" button', () => {
+When('I scroll up to "See use cases" button', () => {
     SolutionsPage.scrollToSeeIndustriesButton()
 })
-Then('I click on "See use cases" button', () => {
+And('I click on "See use cases" button', () => {
     SolutionsPage.clickSeeUseCasesButton()
 })
-And('I check "Account notifications" text and image visibility', () => {
+Then('I should see "Account notifications" text and image', () => {
     SolutionsPage.checkAccountNotificationWindowVisibility
 })

@@ -1,5 +1,4 @@
 import { Given, When, Then, And } from "cypress-cucumber-preprocessor/steps"
-import MainPage from "../../Pages/MainPage.page";
 import CoockiesPage from "../../Pages/CoockiesPage.page";
 import PartnershipsPage from "../../Pages/PartnershipsPage.page";
 import TextGenerator from "../../Helper/TextGenerator";
@@ -13,40 +12,40 @@ Given('I am on the Telnyx page and confirm the cookies', () => {
     cy.visit('/')
     CoockiesPage.acceptCookies()
 })
-When('I select "Why Telnyx" option in "Partners" dropdown', () => {
-    MainPage.clickWhyTelnyxButton()
-    MainPage.clickPartnersButton()
+And('I select "Why Telnyx" option in "Partners" dropdown', () => {
+    PartnershipsPage.clickWhyTelnyxButton()
+    PartnershipsPage.clickPartnersButton()
 })
-And('I click on "Become a partner" button', () => {
+When('I click on "Become a partner" button', () => {
     PartnershipsPage.clickBecomeAPartnerButton()
 })
-Then('I set valid value in "First Name" field', () => {
+And('I type valid value in "First Name" field', () => {
     PartnershipsPage.enterFirstNameFieldValue(Name)
 })
-And('I set valid value in "Last Name" field', () => {
+And('I type valid value in "Last Name" field', () => {
     PartnershipsPage.enterLastNameFieldValue(Name)
 })
-And('I set valid value in "Company" field', () => {
+And('I type valid value in "Company" field', () => {
     PartnershipsPage.enterCompanyFieldValue(Name)
 })
-And('I set valid value in "Business email" field', () => {
+And('I type valid value in "Business email" field', () => {
     PartnershipsPage.enterEmailFieldValue(Email)
 })
 And('I select "Canada" option in "Country" dropdown', () => {
     PartnershipsPage.selectCanadaOptionInCountryDropdown()
 })
-And('I set valid value in "Phone Number" field', () => {
+And('I type valid value in "Phone Number" field', () => {
     PartnershipsPage.enterPhoneNumberFieldValue(Number)
 })
 And('I select "Reseller" option in "Partner type" dropdown', () => {
     PartnershipsPage.selectResellerOptionInPartnerTypeDropdown()
 })
-And('I set valid value in "Tell us" field', () => {
+And('I type valid value in "Tell us" field', () => {
     PartnershipsPage.enterTellUsFieldValue(Text)
 })
-Then('I click on "Apply Now" button', () => {
+And('I click on "Apply Now" button', () => {
     PartnershipsPage.clickApplyNowButton()
 })
-And('I check "Thank you." message visibility', () => {
-    PartnershipsPage.checkSubmitMessageTextVisibility()
+Then('I should see "Thank you." message', () => {
+    PartnershipsPage.checkSubmitMessageVisibility()
 })

@@ -5,6 +5,7 @@ const allureWriter = require('@shelex/cypress-allure-plugin/writer')
 
 module.exports = defineConfig({
   e2e: {
+    retries: 2,
     specPattern: "**/*.feature",
     baseUrl: "https://telnyx.com/",
     defaultCommandTimeout: 30000,

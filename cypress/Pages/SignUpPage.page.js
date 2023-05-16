@@ -1,4 +1,6 @@
-class SignUpPage{
+const MainPage = require("./MainPage.page")
+
+export default new class SignUpPage extends MainPage{
     submitButton() {
         return cy.get('[type="submit"]>span').contains('SIGN UP').first()
     }
@@ -19,12 +21,6 @@ class SignUpPage{
     }
     errorTextMessage() {
         return cy.get('#email_message')
-    }
-    applyPromoCodeButton() {
-        return cy.get('a[aria-hidden]>span')
-    }
-    promoCodeField() {
-        return cy.get('#promo_code')
     }
     logInLinkButton() {
         return cy.get('p>a[href*="telnyx"]')
@@ -53,19 +49,13 @@ class SignUpPage{
     clickSubmitButton() {
         this.submitButton().click()
     }
-    checkSubmitTextMessageVisibility() {
+    checkSubmitMessageVisibility() {
         for(let i=0; i>2; i++) {
             this.submitTextMessage().eq(i).should('be.visible')
         }
     }
-    checkErrorTextMessageVisibility() {
+    checkErrorMessageVisibility() {
         this.errorTextMessage().should('be.visible')
-    }
-    clickApplyPromoCodeButton() {
-        this.applyPromoCodeButton().click()
-    }
-    enterPromoCodeFieldValue(Number) {
-        this.promoCodeField().type(Number)
     }
     scrollToLogInLinkButton() {
         this.logInLinkButton().scrollIntoView()
@@ -86,5 +76,3 @@ class SignUpPage{
         this.titleText().should('be.visible')
     }
 }
-
-module.exports = new SignUpPage()

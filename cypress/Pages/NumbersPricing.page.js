@@ -1,4 +1,6 @@
-class NumbersPricing{
+const MainPage = require("./MainPage.page")
+
+export default new class NumbersPricing extends MainPage{
     payAsYouGoText() {
         return cy.get('h2#pay-as-you-go')
     }
@@ -17,14 +19,14 @@ class NumbersPricing{
     scrollDownPayAsYouGoDropdown() {
         this.payAsYouGoDropdown().scrollIntoView()
     }
-    selectCanadaOptinInPayAsYouGoDropdown() {
+    selectCanadaOptionInPayAsYouGoDropdown() {
         this.payAsYouGoDropdown().click({force: true})
         this.canadaOption().click()
     }
     checkUsingAnExistingNumberTextVisibility() {
         this.usingAnExistingNumberText().should('be.visible')
     }
-    selectUkraineOptinInpayAsYouGoDropdown() {
+    selectUkraineOptionInPayAsYouGoDropdown() {
         this.payAsYouGoDropdown().click({force: true})
         this.ukraineOption().click()
     }
@@ -32,4 +34,3 @@ class NumbersPricing{
         this.usingAnExistingNumberText().should('not.exist')
     }
 }
-module.exports = new NumbersPricing()

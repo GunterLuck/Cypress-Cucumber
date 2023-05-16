@@ -1,4 +1,6 @@
-class SolutionsPage {
+const MainPage = require("./MainPage.page")
+
+export default new class SolutionsPage extends MainPage{
     seeIndustriesButton() {
         return cy.get('[href="#industries"]>span')
     }
@@ -27,4 +29,3 @@ class SolutionsPage {
         this.accountNotificationWindow().should('be.visible')
     }
 }
-module.exports = new SolutionsPage()

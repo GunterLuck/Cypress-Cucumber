@@ -1,5 +1,4 @@
-import { When, Then, And } from "cypress-cucumber-preprocessor/steps";
-import MainPage from "../../Pages/MainPage.page";
+import { Given, When, Then, And } from "cypress-cucumber-preprocessor/steps";
 import GlobalNumbersPage from "../../Pages/GlobalNumbers.page";
 import SignUpPage from "../../Pages/SignUpPage.page";
 import TextGenerator from "../../Helper/TextGenerator";
@@ -9,32 +8,32 @@ const Email = TextGenerator.randomEmail()
 const Name = TextGenerator.randomName()
 const Password = TextGenerator.randomPassword()
 
-Given('I am on the Telnyx page and confirm the cookies', () => { 
+Given('I am on the Telnyx page and confirm the cookies', async() => { 
     cy.visit('/')
     CoockiesPage.acceptCookies()
 })
 When('I Select "Global Numbers" option in "Products" dropdown', async() => {
-    MainPage.clickProductsDropdown()
-    MainPage.clickGlobalNumbersButton()
+    GlobalNumbersPage.clickProductsDropdown()
+    GlobalNumbersPage.clickGlobalNumbersButton()
 })
-Then('I click on "Puchase numbers" button', async() => {
-    GlobalNumbersPage.clickPushaseNumbersButton()
+And('I click on "Search numbers" button', async() => {
+    GlobalNumbersPage.clickSearchNumbersButton()
 })
-Then('I set valid value in "Email" field', async() => {
+When('I type valid value in "Email" field', async() => {
     SignUpPage.enterEmailFieldValue(Email)
 })
-And('I set valid value in "Full Name" field', async() => {
+And('I type valid value in "Full Name" field', async() => {
     SignUpPage.enterFullNameFieldValue(Name)
 })
-And('I set valid value in "Password" field', async() => {
+And('I type valid value in "Password" field', async() => {
     SignUpPage.enterPasswordFieldValue(Password)
 })
 And('I click on "Agree" button', async() => {
     SignUpPage.clickAgreeButton()
 })
-Then('I click on "Submit" button', async() => {
+And('I click on "Submit" button', async() => {
     SignUpPage.clickSubmitButton()
 })
-And('I check "one last step" message visibility', async() => {
-    SignUpPage.checkSubmitTextMessageVisibility()
+Then('I should see "one last step" message', async() => {
+    SignUpPage.checkSubmitMessageVisibility()
 })

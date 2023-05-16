@@ -1,4 +1,6 @@
-class MissionControlPage {
+const MainPage = require("./MainPage.page")
+
+export default new class MissionControlPage extends MainPage{
     topicText() {
         return cy.get('div>h1')
     }
@@ -11,11 +13,10 @@ class MissionControlPage {
     checkIndustryLeadingLincButtonClickability() {
         this.industryLeadingLincButton().should('have.attr','href')
     }
-    checkTopicTextMaching() {
-        this.topicText().should('have.text', 'Mission Control Portal')
+    checkTopicTextMaching(text) {
+        this.topicText().should('have.text', text)
     }
     clickIndustryLeadingLincButton() {
         this.industryLeadingLincButton().click({force: true})
     }
 }
-module.exports = new MissionControlPage()

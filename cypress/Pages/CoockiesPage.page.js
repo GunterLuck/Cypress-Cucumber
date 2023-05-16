@@ -5,13 +5,6 @@ class CoockiesPage{
     acceptCookies() {
         this.submitButton().click({force: true})
     }
-    // acceptCookies() {
-    //     this.submitButton().then(($pass) => {
-    //         if (expect($pass).to.be.visible) {
-    //             this.clickSubmitButton()
-    //         } else {}
-    //     })
-    // }
 }
 
 module.exports = new CoockiesPage()

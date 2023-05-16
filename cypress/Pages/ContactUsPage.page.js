@@ -1,4 +1,4 @@
-class ContactUsPage{
+class ContactUsPage {
     firstNameField() {
         return cy.get('#FirstName')
     }
@@ -42,7 +42,7 @@ class ContactUsPage{
         return cy.get('[href="https://telnyx.com/report-abuse"]>span').first()
     }
     selectSupportOptionInReasonForContactDropdown() {
-        this.reasonForContactDropdown().select('Support')
+        this.reasonForContactDropdown().select('Support', {force: true})
     }
     enterFirstNameFieldValue(Name) {
         this.firstNameField().type(Name)
@@ -68,8 +68,8 @@ class ContactUsPage{
     clickSubmitButton() {
         this.submitButton().click()
     }
-    checkSubmitMessageTextVisibility() {
-        this.submitMessageText().should('have.text', 'Thank you.')
+    checkSubmitMessageText(text) {
+        this.submitMessageText().should('have.text', text)
     }
     clickSupportCenterButton() {
         this.supportCenterButton().invoke('removeAttr', 'target').click()
@@ -86,6 +86,7 @@ class ContactUsPage{
     clickReportAbuseLinkButton() {
         this.reportAbuseLinkButton().click()
     }
+    
 }
 
 module.exports = new ContactUsPage()

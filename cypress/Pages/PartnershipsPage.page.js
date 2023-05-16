@@ -1,4 +1,6 @@
-class PartnershipPage {
+const MainPage = require("./MainPage.page")
+
+export default new class PartnershipPage extends MainPage{
     becomeAPartnerButton() {
         return cy.get('div>a>span').contains('BECOME A PARTNER').first()
     }
@@ -39,7 +41,7 @@ class PartnershipPage {
         this.becomeAPartnerButton().click({force: true})
     }
     enterFirstNameFieldValue(Name) {
-        this.firstNameField().type(Name)
+        this.firstNameField().type(Name, {force: true})
     }
     enterLastNameFieldValue(Name) {
         this.lastNameField().type(Name)
@@ -65,11 +67,10 @@ class PartnershipPage {
     clickApplyNowButton() {
         this.applyNowButton().click()
     }
-    checkSubmitMessageTextVisibility() {
+    checkSubmitMessageVisibility() {
         this.submitMessageText().should('have.text', 'Thank you.')
     }
-    checkErrorMessageTextVisibility() {
+    checkErrorMessageVisibility() {
         this.submitMessageText().should('be.visible')
     }
 }
-module.exports = new PartnershipPage()

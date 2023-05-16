@@ -47,12 +47,6 @@ class TextGenerator{
         const result = this.randomText();
         return (result + 'aW2_');
     }
-    dateValue() {
-        return ('11111111')
-    }
-    timeValue() {
-        return ('1111')
-    }
 }
 
 module.exports = new TextGenerator()

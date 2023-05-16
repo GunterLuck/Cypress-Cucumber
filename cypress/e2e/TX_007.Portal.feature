@@ -2,11 +2,11 @@ Feature: Check that "Confirm email" page is loading after clicking "Submit" butt
     
     Scenario: Verify that "The last one step" message appears and "Confirm email" page is loading after clicking "Submit" button,  the Sign up form is triggered after clicking the "portal" link button on the "SMS API" page.
         Given I am on the Telnyx page and confirm the cookies
-        When I select "SMS API" option in "Products" dropdown
-        And I click on "portal" link button
-        Then I set valid value in "Email" field
-        And I set valid value in "Full Name" field
-        And I set valid value in "Password" field
+        And I select "SMS API" option in "Products" dropdown
+        When I click on "portal" link button
+        And I type valid value in "Email" field
+        And I type valid value in "Full Name" field
+        And I type valid value in "Password" field
         And I click on "Agree" button
-        Then I click on "Submit" button
-        And I check "one last step" message visibility
+        And I click on "Submit" button
+        Then I should see "one last step" message

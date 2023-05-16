@@ -1,5 +1,4 @@
-import { Given, When, Then, And } from "cypress-cucumber-preprocessor/steps"
-import MainPage from "../../Pages/MainPage.page";
+import { Given, When, Then, And } from "cypress-cucumber-preprocessor/steps";
 import NumbersPricingPage from "../../Pages/NumbersPricing.page";
 import CoockiesPage from "../../Pages/CoockiesPage.page";
 
@@ -7,23 +6,22 @@ Given('I am on the Telnyx page and confirm the cookies', () => {
     cy.visit('/')
     CoockiesPage.acceptCookies()
 })
-When('I Select "Global Numbers" option in "Pricing" dropdown', () => {
-    MainPage.clickPricingDropdown()
-    MainPage.clickGlobalNumbersButton()
+And('I Select "Global Numbers" option in "Pricing" dropdown', () => {
+    NumbersPricingPage.clickPricingDropdown()
+    NumbersPricingPage.clickGlobalNumbersButton()
 })
-Then('I scroll down to "Pay as you go" dropdown', () => {
+When('I scroll down to "Pay as you go" dropdown', () => {
     NumbersPricingPage.scrollDownPayAsYouGoDropdown()
 })
 And('I select "Canada" option in "Pay as you go" dropdown', () => {
-    NumbersPricingPage.selectCanadaOptinInPayAsYouGoDropdown()
-    
+    NumbersPricingPage.selectCanadaOptionInPayAsYouGoDropdown()   
 })
-And('I check "Using an existing number" text visibility', () => {
+Then('I should see "Using an existing number" text', () => {
     NumbersPricingPage.checkUsingAnExistingNumberTextVisibility()
 })
-Then('I select "Ukraine" option in "Pay as you go" dropdown', () => {
-    NumbersPricingPage.selectUkraineOptinInpayAsYouGoDropdown()
+When('I select "Ukraine" option in "Pay as you go" dropdown', () => {
+    NumbersPricingPage.selectUkraineOptionInPayAsYouGoDropdown()
 })
-And('I check "Using an existing number" text not visibile', () => {
+Then('I shouldn`t see "Using an existing number" text', () => {
     NumbersPricingPage.checkUsingAnExistingNumberTextNotVisible()
 })

@@ -1,12 +1,12 @@
 # Telnyx-Cypress-Cucumber-Test
 
-This project should do https://telnyx.com/ part of the main functionality tests on cypress-cucumber framework.
+This project do https://telnyx.com/ part of the functionality e2e tests on cypress-cucumber framework with browserify preprocessor.
 
-Allur is used as a reporter in this project.
+Allure is used as a reporter in this project.
 
 # Requirement
 
-[Node.js v16.18.0.](https://nodejs.org/uk/blog/release/v16.18.0/)
+[Node.js v18.15.0.](https://nodejs.org/en/blog/release/v18.15.0)
 
 # How to start
 

@@ -1,4 +1,4 @@
-class MainPage{
+export default class MainPage{
     pricingDropdown() {
         return cy.get('button>div>span').contains('Pricing').first()
     }
@@ -60,4 +60,3 @@ class MainPage{
         this.signUpButton().click()
     }
 }
-module.exports = new MainPage()
