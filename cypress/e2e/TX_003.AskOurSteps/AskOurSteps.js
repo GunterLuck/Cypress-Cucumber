@@ -18,37 +18,22 @@ And('I select "Global Numbers" option in "Products" dropdown', () => {
     GlobalNumbersPage.clickProductsDropdown()
     GlobalNumbersPage.clickGlobalNumbersButton()
 })
-When('I click on  "Ask our experts" link button', () => {
+When('I click on "Ask our experts" link button', () => {
     GlobalNumbersPage.clickAskOurExpertsButton()
 })
-And('I select "Support" option in "Choose Reason For Contact" dropdown', () => {
+
+And('I fill the "Contact Us" form with correct data', async() => {
     ContactUsPage.selectSupportOptionInReasonForContactDropdown()
-})
-And('I type valid value in "First Name" field', () => {
     ContactUsPage.enterFirstNameFieldValue(Name)
-})
-And('I type valid value in "Lust Name" field', () => {
     ContactUsPage.enterLastNameFieldValue(Name)
-})
-And('I type valid value in "Email" field', () => {
     ContactUsPage.enterEmailFieldValue(Email)
-})
-And('I select "Canada" option in "Country" dropdown', () => {
     ContactUsPage.selectCanadaOptionInCountryDropdown()
-})
-And('I type valid value in "Phone Number" field', () => {
     ContactUsPage.enterPhoneNumberFieldValue(Number)
-})
-And('I type valid value in "Company Website" field', () => {
     ContactUsPage.enterCompanyWebsiteFieldValue(Website)
-})
-And('I type valid value in "Describe Your Request" field', () => {
     ContactUsPage.enterDescribeYourRequestFieldValue(Text)
-})
-And('I type valid value in "How did you hear about Telnyx" field', () => {
     ContactUsPage.enterHowDidYouHearAboutTelnyxFieldValue(Text)
 })
-When('I click on "Submit" button', () => {
+And('I click on "Submit" button', () => {
     ContactUsPage.clickSubmitButton()
 })
 Then('I should see "Thank you." message text', () => {

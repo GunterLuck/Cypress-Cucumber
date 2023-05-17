@@ -11,7 +11,7 @@ Given('I am on the Telnyx page and confirm the cookies', () => {
     cy.visit('/')
     CoockiesPage.acceptCookies()
 })
-And('I click on "Sign Up" button', () => {
+When('I click on "Sign Up" button', () => {
     SignUpPage.clickSignUpButton()
 })
 When('I scroll down to "Log In" link button', () => {
@@ -35,7 +35,7 @@ Then('I should see "That email and password combinations is not valid ..." messa
 Then('I should see "Required" message', () => {
     SignInPage.checkEmptyFieldErrorMesageVisibility()
 })
-When('I scroll down to "Telnyxs Terms and Conditions" link button', () => {
+And('I scroll down to "Telnyxs Terms and Conditions" link button', () => {
     SignUpPage.scrollTelnyxsTermsLinkButton()
 })
 And('I click on "Privacy Policy" button', () => {

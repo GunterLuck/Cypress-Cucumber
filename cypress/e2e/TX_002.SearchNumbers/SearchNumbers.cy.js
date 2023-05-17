@@ -19,16 +19,10 @@ When('I Select "Global Numbers" option in "Products" dropdown', async() => {
 And('I click on "Search numbers" button', async() => {
     GlobalNumbersPage.clickSearchNumbersButton()
 })
-When('I type valid value in "Email" field', async() => {
+And('I fill the "Contact Us" form with correct data', async() => {
     SignUpPage.enterEmailFieldValue(Email)
-})
-And('I type valid value in "Full Name" field', async() => {
     SignUpPage.enterFullNameFieldValue(Name)
-})
-And('I type valid value in "Password" field', async() => {
     SignUpPage.enterPasswordFieldValue(Password)
-})
-And('I click on "Agree" button', async() => {
     SignUpPage.clickAgreeButton()
 })
 And('I click on "Submit" button', async() => {

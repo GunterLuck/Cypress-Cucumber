@@ -2,6 +2,6 @@ Feature: Chech that "Telnyxs Terms & Conditions" link navigate to "Telnyxs Terms
     
     Scenario: Verify that after clicking on the "Telnyxs Terms & Conditions" button from the Sign up page the "Telnyxs Terms & Conditions" text appears.
         Given I am on the Telnyx page and confirm the cookies
-        And I click on "Sign Up" button
-        When I click on "Telnyxs Terms and Conditions" link button
+        When I click on "Sign Up" button
+        And I click on "Telnyxs Terms and Conditions" link button
         Then I should see title text

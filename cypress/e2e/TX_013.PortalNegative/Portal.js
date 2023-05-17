@@ -12,11 +12,11 @@ Given('I am on the Telnyx page and confirm the cookies', () => {
     cy.visit('/')
     CoockiesPage.acceptCookies()
 })
-And('I select "SMS API" option in "Products" dropdown', () => {
+When('I select "SMS API" option in "Products" dropdown', () => {
     SMSAPIPage.clickProductsDropdown()
     SMSAPIPage.clickSmsApiButton()
 })
-When('I click on "portal" link button', () => {
+And('I click on "portal" link button', () => {
     SMSAPIPage.clickPortalButton()
 })
 Then('I type valid value in "Email" field', () => {

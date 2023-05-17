@@ -14,19 +14,17 @@ Given('I am on the Telnyx page and confirm the cookies', () => {
 And('I click on "Sign Up" button', () => {
     SignUpPage.clickSignUpButton()
 })
-When('I scroll down to "Log In" link button', () => {
+And('I scroll down to "Log In" link button', () => {
     SignUpPage.scrollToLogInLinkButton()
 })
 And('I click on "Log In" link button', () => {
     SignUpPage.clickLogInLinkButton()
 })
-When('I type invalid value in "Business Email" field', () => {
+And('I fill the "Sign In" form with correct data', async() => {
     SignInPage.enterEmailFieldValue(Email)
-})
-And('I type invalid value in "Password" field', () => {
     SignInPage.enterPasswordFieldValue(Password)
 })
-When('I click on "Log In" button', () => {
+And('I click on "Log In" button', () => {
     SignInPage.clickLogInButton()
 })
 Then('I should see "That email and password combinations is not valid ..." message', () => {

@@ -6,7 +6,7 @@ Given('I am on the Telnyx page and confirm the cookies', () => {
     cy.visit('/')
     CoockiesPage.acceptCookies()
 })
-And('I select "Mission Control" option in "Why Telnyx" dropdown', () => {
+When('I select "Mission Control" option in "Why Telnyx" dropdown', () => {
     MissionControlPage.clickWhyTelnyxButton()
     MissionControlPage.clickMissionControlButton()
 })

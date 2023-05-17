@@ -6,11 +6,11 @@ Given('I am on the Telnyx page and confirm the cookies', () => {
     cy.visit('/')
     CoockiesPage.acceptCookies()
 })
-And('I Select "Global Numbers" option in "Pricing" dropdown', () => {
+When('I Select "Global Numbers" option in "Pricing" dropdown', () => {
     NumbersPricingPage.clickPricingDropdown()
     NumbersPricingPage.clickGlobalNumbersButton()
 })
-When('I scroll down to "Pay as you go" dropdown', () => {
+And('I scroll down to "Pay as you go" dropdown', () => {
     NumbersPricingPage.scrollDownPayAsYouGoDropdown()
 })
 And('I select "Canada" option in "Pay as you go" dropdown', () => {

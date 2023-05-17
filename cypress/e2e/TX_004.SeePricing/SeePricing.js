@@ -7,11 +7,11 @@ Given('I am on the Telnyx page and confirm the cookies', () => {
     cy.visit('/')
     CoockiesPage.acceptCookies()
 })
-And('I select "Global Numbers" option in "Products" dropdown', () => {
+When('I select "Global Numbers" option in "Products" dropdown', () => {
     GlobalNumbersPage.clickProductsDropdown()
     GlobalNumbersPage.clickGlobalNumbersButton()
 })
-When('I scroll down to "See pricing" button', () => {
+And('I scroll down to "See pricing" button', () => {
     GlobalNumbersPage.scrollToSeePricingButton()
 })
 And('I click on "See pricing" button', () => {

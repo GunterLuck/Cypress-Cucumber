@@ -2,7 +2,7 @@ Feature: Chech that "Privacy Policy" link navigate to "Privacy Policy" page from
     
     Scenario: Verify that after clicking on the "Privacy Policy" button from the Sign up page the "Privacy Policy" text appears.
         Given I am on the Telnyx page and confirm the cookies
-        And I click on "Sign Up" button
-        When I scroll down to "Telnyxs Terms & Conditions" link button
+        When I click on "Sign Up" button
+        And I scroll down to "Telnyxs Terms & Conditions" link button
         And I click on "Privacy Policy" button
         Then I should see topic text

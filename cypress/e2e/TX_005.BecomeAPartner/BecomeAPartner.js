@@ -19,28 +19,14 @@ And('I select "Why Telnyx" option in "Partners" dropdown', () => {
 When('I click on "Become a partner" button', () => {
     PartnershipsPage.clickBecomeAPartnerButton()
 })
-And('I type valid value in "First Name" field', () => {
+And('I fill the "Become a Telnyx Partner" form with correct data', async() => {
     PartnershipsPage.enterFirstNameFieldValue(Name)
-})
-And('I type valid value in "Last Name" field', () => {
     PartnershipsPage.enterLastNameFieldValue(Name)
-})
-And('I type valid value in "Company" field', () => {
     PartnershipsPage.enterCompanyFieldValue(Name)
-})
-And('I type valid value in "Business email" field', () => {
     PartnershipsPage.enterEmailFieldValue(Email)
-})
-And('I select "Canada" option in "Country" dropdown', () => {
     PartnershipsPage.selectCanadaOptionInCountryDropdown()
-})
-And('I type valid value in "Phone Number" field', () => {
     PartnershipsPage.enterPhoneNumberFieldValue(Number)
-})
-And('I select "Reseller" option in "Partner type" dropdown', () => {
     PartnershipsPage.selectResellerOptionInPartnerTypeDropdown()
-})
-And('I type valid value in "Tell us" field', () => {
     PartnershipsPage.enterTellUsFieldValue(Text)
 })
 And('I click on "Apply Now" button', () => {

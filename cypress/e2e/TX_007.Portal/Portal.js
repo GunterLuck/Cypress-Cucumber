@@ -12,23 +12,17 @@ Given('I am on the Telnyx page and confirm the cookies', () => {
     cy.visit('/')
     CoockiesPage.acceptCookies()
 })
-And('I select "SMS API" option in "Products" dropdown', () => {
+When('I select "SMS API" option in "Products" dropdown', () => {
     SMSAPIPage.clickProductsDropdown()
     SMSAPIPage.clickSmsApiButton()
 })
-When('I click on "portal" link button', () => {
+And('I click on "portal" link button', () => {
     SMSAPIPage.clickPortalButton()
 })
-And('I type valid value in "Email" field', () => {
+And('I fill the "Sign Up" form with correct data', async() => {
     SignUpPage.enterEmailFieldValue(Email)
-})
-And('I type valid value in "Full Name" field', () => {
     SignUpPage.enterFullNameFieldValue(Name)
-})
-And('I type valid value in "Password" field', () => {
     SignUpPage.enterPasswordFieldValue(Password)
-})
-And('I click on "Agree" button', () => {
     SignUpPage.clickAgreeButton()
 })
 And('I click on "Submit" button', () => {
