@@ -17,7 +17,7 @@ export default new class GlobalNumbersPage extends MainPage{
         this.productsDropdown().click()
     }
     clickSearchNumbersButton() {
-        this.searchNumbersButton().click()
+        this.searchNumbersButton().click({force: true})
     }
     clickAskOurExpertsButton() {
         this.askOurExpertsButton().click({force: true})
