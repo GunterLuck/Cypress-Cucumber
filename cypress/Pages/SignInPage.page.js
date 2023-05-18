@@ -12,7 +12,7 @@ class SignInPage {
         return cy.get('div>div>div>span[class]').first()
     }
     emptyFieldErrorMesage() {
-        return cy.get('label>div>div[class]').contains('Required')
+        return cy.get('[class*="TextField__Error"]').first()
     }
     enterEmailFieldValue(Email) {
         this.emailField().type(Email)
