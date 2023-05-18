@@ -55,6 +55,7 @@ export default new class SignUpPage extends MainPage{
         }
     }
     checkErrorMessageVisibility() {
+        this.errorTextMessage().scrollIntoView()
         this.errorTextMessage().should('be.visible')
     }
     scrollToLogInLinkButton() {
