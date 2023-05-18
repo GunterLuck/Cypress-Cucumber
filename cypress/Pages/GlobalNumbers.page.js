@@ -26,6 +26,6 @@ export default new class GlobalNumbersPage extends MainPage{
         this.seePricingButton().scrollIntoView()
     }
     clickSeePricingButton() {
-        this.seePricingButton().click()
+        this.seePricingButton().click({force: true})
     }
 }
