@@ -71,6 +71,6 @@ export default new class PartnershipPage extends MainPage{
         this.submitMessageText().should('have.text', 'Thank you.')
     }
     checkErrorMessageVisibility() {
-        this.submitMessageText().should('be.visible')
+        this.errorMessageText().should('be.visible')
     }
 }

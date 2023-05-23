@@ -21,16 +21,14 @@ And('I click on "portal" link button', () => {
 })
 And('I fill the "Sign Up" form with correct data', async() => {
     SignUpPage.enterEmailFieldValue(Email)
-    SignUpPage.enterFullNameFieldValue(Name)
+    SignUpPage.enterFirstNameFieldValue(Name)
+    SignUpPage.enterLastNameFieldValue(Name)
     SignUpPage.enterPasswordFieldValue(Password)
     SignUpPage.clickAgreeButton()
 })
-And('I click on "Submit" button', () => {
+And('I click on "SUBMIT" button', () => {
     SignUpPage.clickSubmitButton()
 })
 Then('I should see "one last step" message', () => {
     SignUpPage.checkSubmitMessageVisibility()
-})
-Then('I should see "This field is required." message', () => {
-    SignUpPage.checkErrorMessageVisibility()
 })

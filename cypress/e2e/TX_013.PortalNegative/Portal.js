@@ -19,23 +19,8 @@ When('I select "SMS API" option in "Products" dropdown', () => {
 And('I click on "portal" link button', () => {
     SMSAPIPage.clickPortalButton()
 })
-Then('I type valid value in "Email" field', () => {
-    SignUpPage.enterEmailFieldValue(Email)
-})
-And('I type valid value in "Full Name" field', () => {
-    SignUpPage.enterFullNameFieldValue(Name)
-})
-And('I type valid value in "Password" field', () => {
-    SignUpPage.enterPasswordFieldValue(Password)
-})
-And('I click on "Agree" button', () => {
-    SignUpPage.clickAgreeButton()
-})
 And('I click on "Submit" button', () => {
     SignUpPage.clickSubmitButton()
-})
-Then('I should see "one last step" message', () => {
-    SignUpPage.checkSubmitMessageVisibility()
 })
 Then('I should see "This field is required." message', () => {
     SignUpPage.checkErrorMessageVisibility()

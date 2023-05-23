@@ -21,7 +21,6 @@ And('I select "Global Numbers" option in "Products" dropdown', () => {
 When('I click on "Ask our experts" link button', () => {
     GlobalNumbersPage.clickAskOurExpertsButton()
 })
-
 And('I fill the "Contact Us" form with correct data', async() => {
     ContactUsPage.selectSupportOptionInReasonForContactDropdown()
     ContactUsPage.enterFirstNameFieldValue(Name)
@@ -33,7 +32,7 @@ And('I fill the "Contact Us" form with correct data', async() => {
     ContactUsPage.enterDescribeYourRequestFieldValue(Text)
     ContactUsPage.enterHowDidYouHearAboutTelnyxFieldValue(Text)
 })
-And('I click on "Submit" button', () => {
+And('I click on "SUBMIT" button', () => {
     ContactUsPage.clickSubmitButton()
 })
 Then('I should see "Thank you." message text', () => {

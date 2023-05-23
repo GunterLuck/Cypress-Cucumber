@@ -19,9 +19,10 @@ When('I Select "Global Numbers" option in "Products" dropdown', async() => {
 And('I click on "Search numbers" button', async() => {
     GlobalNumbersPage.clickSearchNumbersButton()
 })
-And('I fill the "Contact Us" form with correct data', async() => {
+And('I fill the "Sign Up" form with correct data', async() => {
     SignUpPage.enterEmailFieldValue(Email)
-    SignUpPage.enterFullNameFieldValue(Name)
+    SignUpPage.enterFirstNameFieldValue(Name)
+    SignUpPage.enterLastNameFieldValue(Name)
     SignUpPage.enterPasswordFieldValue(Password)
     SignUpPage.clickAgreeButton()
 })

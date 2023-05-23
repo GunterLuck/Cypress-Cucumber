@@ -7,8 +7,11 @@ export default new class SignUpPage extends MainPage{
     emailField() {
         return cy.get('#email')
     }
-    fullNameField() {
-        return cy.get('#full_name')
+    firstNameField() {
+        return cy.get('#first_name')
+    }
+    lastNameField() {
+        return cy.get('#last_name')
     }
     passwordField() {
         return cy.get('#password')
@@ -20,7 +23,7 @@ export default new class SignUpPage extends MainPage{
         return cy.get('div[class]>p[class]')
     }
     errorTextMessage() {
-        return cy.get('#email_message')
+        return cy.get('#first_name_message')
     }
     logInLinkButton() {
         return cy.get('p>a[href*="telnyx"]')
@@ -37,8 +40,11 @@ export default new class SignUpPage extends MainPage{
     enterEmailFieldValue(Email) {
         this.emailField().type(Email, { force: true })
     }
-    enterFullNameFieldValue(Name) {
-        this.fullNameField().type(Name)
+    enterFirstNameFieldValue(Name) {
+        this.firstNameField().type(Name)
+    }
+    enterLastNameFieldValue(Name) {
+        this.lastNameField().type(Name)
     }
     enterPasswordFieldValue(Password) {
         this.passwordField().type(Password)

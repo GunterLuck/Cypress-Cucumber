@@ -20,17 +20,8 @@ And('I scroll down to "Log In" link button', () => {
 And('I click on "Log In" link button', () => {
     SignUpPage.clickLogInLinkButton()
 })
-When('I type valid value in "Business Email" field', () => {
-    SignInPage.enterEmailFieldValue(Email)
-})
-And('I type valid value in "Password" field', () => {
-    SignInPage.enterPasswordFieldValue(Password)
-})
 And('I click on "Log In" button', () => {
     SignInPage.clickLogInButton()
-})
-Then('I should see "That email and password combinations is not valid ..." message', () => {
-    SignInPage.checkErrorMesageVisibility()
 })
 Then('I should see "Required" message', () => {
     SignInPage.checkEmptyFieldErrorMesageVisibility()
