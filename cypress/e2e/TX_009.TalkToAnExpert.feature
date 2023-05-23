@@ -7,5 +7,5 @@ Feature: Test the "Contact Us" form with positive scenario, form opened via "Tal
         And I click on "industry-leading platform" link-button
         And I click on "Talk to an expert" link button
         And I fill the "Contact Us" form with correct data
-        And I click on "Submit" button
+        And I click on "SUBMIT" button
         Then I should see "Thank you." message

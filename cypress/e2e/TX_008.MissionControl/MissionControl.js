@@ -1,11 +1,6 @@
-import { Given, When, Then, And } from "cypress-cucumber-preprocessor/steps"
-import CoockiesPage from "../../Pages/CoockiesPage.page";
+import { When, Then } from "cypress-cucumber-preprocessor/steps"
 import MissionControlPage from "../../Pages/MissionControlPage.page";
 
-Given('I am on the Telnyx page and confirm the cookies', () => { 
-    cy.visit('/')
-    CoockiesPage.acceptCookies()
-})
 When('I select "Mission Control" option in "Why Telnyx" dropdown', () => {
     MissionControlPage.clickWhyTelnyxButton()
     MissionControlPage.clickMissionControlButton()

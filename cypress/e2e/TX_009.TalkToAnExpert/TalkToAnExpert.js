@@ -1,5 +1,4 @@
-import { Given, When, Then, And } from "cypress-cucumber-preprocessor/steps"
-import CoockiesPage from "../../Pages/CoockiesPage.page";
+import { When, Then, And } from "cypress-cucumber-preprocessor/steps"
 import MissionControlPage from "../../Pages/MissionControlPage.page";
 import G2ComparePage from "../../Pages/G2ComparePage.page";
 import ContactUsPage from "../../Pages/ContactUsPage.page";
@@ -11,10 +10,6 @@ const Number = TextGenerator.randomNumber()
 const Website = TextGenerator.randomWebsite()
 const Text = TextGenerator.randomLongText()
 
-Given('I am on the Telnyx page and confirm the cookies', () => { 
-    cy.visit('/')
-    CoockiesPage.acceptCookies()
-})
 When('I select "Mission Control" option in "Why Telnyx" dropdown', () => {
     MissionControlPage.clickWhyTelnyxButton()
     MissionControlPage.clickMissionControlButton()
@@ -39,7 +34,7 @@ And('I fill the "Contact Us" form with correct data', async() => {
     ContactUsPage.enterDescribeYourRequestFieldValue(Text)
     ContactUsPage.enterHowDidYouHearAboutTelnyxFieldValue(Text)
 })
-And('I click on "Submit" button', () => {
+And('I click on "SUBMIT" button', () => {
     ContactUsPage.clickSubmitButton()
 })
 Then('I should see "Thank you." message', () => {

@@ -4,5 +4,5 @@ Feature: Test Sign up form from Contact Us page with negative scenario where all
         Given I am on the Telnyx page and confirm the cookies
         When I select "SMS API" option in "Products" dropdown
         And I click on "portal" link button
-        And I click on "Submit" button
+        And I click on "SIGN UP" button
         Then I should see "This field is required." message

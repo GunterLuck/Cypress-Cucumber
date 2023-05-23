@@ -1,11 +1,6 @@
-import { Given, When, Then, And } from "cypress-cucumber-preprocessor/steps";
+import { When, Then, And } from "cypress-cucumber-preprocessor/steps";
 import NumbersPricingPage from "../../Pages/NumbersPricing.page";
-import CoockiesPage from "../../Pages/CoockiesPage.page";
 
-Given('I am on the Telnyx page and confirm the cookies', () => { 
-    cy.visit('/')
-    CoockiesPage.acceptCookies()
-})
 When('I Select "Global Numbers" option in "Pricing" dropdown', () => {
     NumbersPricingPage.clickPricingDropdown()
     NumbersPricingPage.clickGlobalNumbersButton()

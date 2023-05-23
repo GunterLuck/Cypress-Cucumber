@@ -4,6 +4,6 @@ Feature:Test the Sign up form with positive scenario, form opened via link from 
         Given I am on the Telnyx page and confirm the cookies
         When I Select "Global Numbers" option in "Products" dropdown
         When I click on "Search numbers" button
-        And I fill the "Contact Us" form with correct data
+        And I fill the "Sign Up" form with correct data
         And I click on "Submit" button
         Then I should see "one last step" message

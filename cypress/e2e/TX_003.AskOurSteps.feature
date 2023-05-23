@@ -5,5 +5,5 @@ Feature: Test the "Contact Us" form with positive scenario, form opened via link
         When I select "Global Numbers" option in "Products" dropdown
         And I click on "Ask our experts" link button
         And I fill the "Contact Us" form with correct data
-        And I click on "Submit" button
+        And I click on "SUBMIT" button
         Then I should see "Thank you." message text
