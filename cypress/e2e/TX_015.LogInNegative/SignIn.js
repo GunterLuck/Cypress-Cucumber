@@ -1,5 +1,4 @@
 import { When, Then, And } from "cypress-cucumber-preprocessor/steps"
-import TextGenerator from "../../Helper/TextGenerator";
 import SignUpPage from "../../Pages/SignUpPage.page";
 import SignInPage from "../../Pages/SignInPage.page";
 
