@@ -24,7 +24,7 @@ jobs:
       
     - name: Reports Generate
       run: npm run allure:clear
-    
+      
     - uses: actions/upload-artifact@master
       with:
         name: allure-results
