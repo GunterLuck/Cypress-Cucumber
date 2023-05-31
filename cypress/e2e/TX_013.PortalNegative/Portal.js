@@ -2,11 +2,6 @@ import { Given, When, Then, And } from "cypress-cucumber-preprocessor/steps"
 import CoockiesPage from "../../Pages/CoockiesPage.page";
 import SignUpPage from "../../Pages/SignUpPage.page";
 import SMSAPIPage from "../../Pages/SMSAPIPage.page";
-import TextGenerator from "../../Helper/TextGenerator";
-
-const Email = TextGenerator.randomEmail()
-const Name = TextGenerator.randomName()
-const Password = TextGenerator.randomPassword()
 
 Given('I am on the Telnyx page and confirm the cookies', () => { 
     cy.visit('/')

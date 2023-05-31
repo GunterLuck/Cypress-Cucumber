@@ -18,5 +18,5 @@ When('I scroll down to the "industry-leading platform" link-button', () => {
     MissionControlPage.scrollToIndustryLeadingLincButton()
 })
 Then('I should see clickability of the "industry-leading platform" link-button', () => {
-    MissionControlPage.checkIndustryLeadingLincButtonClickability()
+    MissionControlPage.checkIndustryLeadingLincButtonVisibility()
 })

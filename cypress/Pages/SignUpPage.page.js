@@ -76,9 +76,6 @@ export default new class SignUpPage extends MainPage{
     clickTelnyxsTermsLinkButton() {
         this.telnyxsTermsLinkButton().invoke('removeAttr', 'target').click({force: true})
     }
-    clickPrivacyPolicyLinkButton() {
-        this.privacyPolicyLinkButton().invoke('removeAttr', 'target').click({force: true})
-    }
     checkTitleTextVisibility() {
         this.titleText().should('be.visible')
     }

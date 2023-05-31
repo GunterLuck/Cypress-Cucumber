@@ -10,12 +10,6 @@ export default new class GlobalNumbersPage extends MainPage{
     seePricingButton() {
         return cy.get('[href="https://telnyx.com/pricing/"]')
     }
-    clickGlobalNumbersButton() {
-        this.globalNumbersButton().click()
-    }
-    clickProductsDropdown() {
-        this.productsDropdown().click()
-    }
     clickSearchNumbersButton() {
         this.searchNumbersButton().click({force: true})
     }

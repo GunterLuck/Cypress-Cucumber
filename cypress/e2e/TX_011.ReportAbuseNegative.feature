@@ -1,4 +1,4 @@
-Feature: Chech that "Privacy Policy" link navigate to "Privacy Policy" page from the Sign up page
+Feature: Check that "Privacy Policy" link navigate to "Privacy Policy" page from the Sign up page
     
     Scenario: Verify that after clicking on the "Privacy Policy" button from the Sign up page the "Privacy Policy" text appears.
         Given I am on the Telnyx page and confirm the cookies

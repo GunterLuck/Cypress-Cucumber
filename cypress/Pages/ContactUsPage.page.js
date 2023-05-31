@@ -35,12 +35,6 @@ class ContactUsPage {
     howDidYouHearAboutTelnyxField() {
         return cy.get('#How_did_you_hear_about_Telnyx_Open__c')
     }
-    errorMesageText() {
-        return cy.get('#ValidMsgReason_for_Contact__c')
-    }
-    reportAbuseLinkButton() {
-        return cy.get('[href="https://telnyx.com/report-abuse"]>span').first()
-    }
     selectSupportOptionInReasonForContactDropdown() {
         this.reasonForContactDropdown().select('Support', {force: true})
     }
@@ -71,22 +65,9 @@ class ContactUsPage {
     checkSubmitMessageText(text) {
         this.submitMessageText().should('have.text', text)
     }
-    clickSupportCenterButton() {
-        this.supportCenterButton().invoke('removeAttr', 'target').click()
-    }
     enterHowDidYouHearAboutTelnyxFieldValue(Text) {
         this.howDidYouHearAboutTelnyxField().type(Text)
     }
-    checkErrorMesageTextVisibility() {
-        this.errorMesageText().should('be.visible')
-    }
-    scrollToReportAbuseLinkButton() {
-        this.reportAbuseLinkButton().scrollIntoView()
-    }
-    clickReportAbuseLinkButton() {
-        this.reportAbuseLinkButton().click()
-    }
-    
 }
 
 module.exports = new ContactUsPage()
