@@ -7,10 +7,6 @@ const Email = TextGenerator.randomEmail()
 const Number = TextGenerator.randomNumber()
 const Text = TextGenerator.randomLongText()
 
-And('I select "Why Telnyx" option in "Partners" dropdown', () => {
-    PartnershipsPage.clickWhyTelnyxButton()
-    PartnershipsPage.clickPartnersButton()
-})
 When('I click on "Become a partner" button', () => {
     PartnershipsPage.clickBecomeAPartnerButton()
 })
@@ -29,4 +25,7 @@ And('I click on "Apply Now" button', () => {
 })
 Then('I should see "Thank you." message', () => {
     PartnershipsPage.checkSubmitMessageVisibility()
+})
+Then('I should see "This field is required." message in Partnerships', () => {
+    PartnershipsPage.checkErrorMessageVisibility()
 })

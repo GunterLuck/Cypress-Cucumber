@@ -1,10 +1,6 @@
 import { When, Then, And } from "cypress-cucumber-preprocessor/steps";
 import NumbersPricingPage from "../../Pages/NumbersPricing.page";
 
-When('I Select "Global Numbers" option in "Pricing" dropdown', () => {
-    NumbersPricingPage.clickPricingDropdown()
-    NumbersPricingPage.clickGlobalNumbersButton()
-})
 And('I scroll down to "Pay as you go" dropdown', () => {
     NumbersPricingPage.scrollDownPayAsYouGoDropdown()
 })

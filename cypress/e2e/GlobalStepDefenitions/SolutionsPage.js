@@ -1,9 +1,7 @@
 import { When, Then, And } from "cypress-cucumber-preprocessor/steps"
 import SolutionsPage from "../../Pages/SolutionsPage.page";
 
-When('I click on "Solutions" button', () => {
-    SolutionsPage.clickSolutionsButton()
-})
+
 And('I click on "See industries" button', () => {
     SolutionsPage.clickSeeIndustriesButton()
 })
