@@ -79,4 +79,7 @@ export default new class SignUpPage extends MainPage{
     checkTitleTextVisibility() {
         this.titleText().should('be.visible')
     }
+    clickPrivacyPolicyLinkButton() {
+        this.privacyPolicyLinkButton().invoke('removeAttr', 'target').click()
+    }
 }

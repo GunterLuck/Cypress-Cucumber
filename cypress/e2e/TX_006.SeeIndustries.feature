@@ -7,4 +7,4 @@ Feature: Test "See use cases" and "See industries" buttons functionality on "Sol
         Then I should see "Healthcare" button
         When I scroll up to "See use cases" button
         And I click on "See use cases" button
-        Then I should see "Account notifications" text and image7
+        Then I should see "Account notifications" text and image

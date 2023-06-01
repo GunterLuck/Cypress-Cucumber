@@ -5,6 +5,8 @@ Feature: Test Sign In form from Sign Up page with negative scenario where all fi
         When I click on "Sign Up" button
         And I scroll down to "Log In" link button
         And I click on "Log In" link button
-        And I fill the "Sign In" form with correct data
+        And I fill the "Sign In" form with incorrect data
+            | email              | password     |
+            | sgduawyg@gmail.com | 12345dsfhjke |
         And I click on "Log In" button
         Then I should see "That email and password combinations is not valid ..." message

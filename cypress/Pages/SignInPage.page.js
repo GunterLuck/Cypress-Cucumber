@@ -14,11 +14,11 @@ class SignInPage {
     emptyFieldErrorMesage() {
         return cy.get('[class*="TextField__Error"]').first()
     }
-    enterEmailFieldValue(Email) {
-        this.emailField().type(Email)
+    enterEmailFieldValue(email) {
+        this.emailField().type(email)
     }
-    enterPasswordFieldValue(Password) {
-        this.passwordField().type(Password)
+    enterPasswordFieldValue(password) {
+        this.passwordField().type(password)
     }
     clickLogInButton() {
         this.logInButton().click({force: true})
