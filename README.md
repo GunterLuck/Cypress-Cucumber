@@ -25,5 +25,3 @@ To run headless test with allure reporter on chrome bowser, call `npm run report
 To check allure results, call `npm run allure:report`
 
 To clean allure-report, call `npm run allure:clear`
-
-GitHub pages with allure results https://gunterluck.github.io/Telnyx-Cypress-Cucumber-Test/32/
