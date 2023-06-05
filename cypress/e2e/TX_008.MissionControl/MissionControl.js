@@ -14,7 +14,7 @@ Then('I should see visibility of the "Mission Control Portal" topic text', () =>
     let text = 'Mission Control Portal' 
     MissionControlPage.checkTopicTextMaching(text)
 })
-When('I scroll down to the "industry-leading platform" link-button', () => {
+And('I scroll down to the "industry-leading platform" link-button', () => {
     MissionControlPage.scrollToIndustryLeadingLincButton()
 })
 Then('I should see clickability of the "industry-leading platform" link-button', () => {

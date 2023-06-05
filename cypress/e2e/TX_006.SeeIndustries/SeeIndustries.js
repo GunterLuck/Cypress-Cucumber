@@ -15,9 +15,6 @@ And('I click on "See industries" button', () => {
 Then('I should see "Healthcare" button', () => {
     SolutionsPage.checkHealthcareButtonVisibility()
 })
-When('I scroll up to "See use cases" button', () => {
-    SolutionsPage.scrollToSeeIndustriesButton()
-})
 And('I click on "See use cases" button', () => {
     SolutionsPage.clickSeeUseCasesButton()
 })

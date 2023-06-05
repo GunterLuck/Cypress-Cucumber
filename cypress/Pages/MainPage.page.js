@@ -53,9 +53,6 @@ export default class MainPage{
     clickSmsApiButton() {
         this.smsApiButton().click()
     }
-    clickContactUsButton() {
-        this.contactUsButton().click()
-    }
     clickSignUpButton() {
         this.signUpButton().click()
     }
