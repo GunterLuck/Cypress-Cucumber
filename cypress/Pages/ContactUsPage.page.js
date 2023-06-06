@@ -71,22 +71,9 @@ class ContactUsPage {
     checkSubmitMessageText(text) {
         this.submitMessageText().should('have.text', text)
     }
-    clickSupportCenterButton() {
-        this.supportCenterButton().invoke('removeAttr', 'target').click()
-    }
     enterHowDidYouHearAboutTelnyxFieldValue(Text) {
         this.howDidYouHearAboutTelnyxField().type(Text)
     }
-    checkErrorMesageTextVisibility() {
-        this.errorMesageText().should('be.visible')
-    }
-    scrollToReportAbuseLinkButton() {
-        this.reportAbuseLinkButton().scrollIntoView()
-    }
-    clickReportAbuseLinkButton() {
-        this.reportAbuseLinkButton().click()
-    }
-    
 }
 
 module.exports = new ContactUsPage()

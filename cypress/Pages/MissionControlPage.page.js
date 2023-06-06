@@ -10,8 +10,8 @@ export default new class MissionControlPage extends MainPage{
     scrollToIndustryLeadingLincButton() {
         this.industryLeadingLincButton().scrollIntoView()
     }
-    checkIndustryLeadingLincButtonClickability() {
-        this.industryLeadingLincButton().should('have.attr','href')
+    checkIndustryLeadingLincButtonVisibility() {
+        this.industryLeadingLincButton().should('be.visible')
     }
     checkTopicTextMaching(text) {
         this.topicText().should('have.text', text)

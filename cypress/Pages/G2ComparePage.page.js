@@ -1,6 +1,6 @@
 class G2ComparePage {
     talkToAnExpertButton() {
-        return cy.get('[href="/contact-us"]>span').contains('Talk to an expert').first()
+        return cy.get('div>a[href="https://telnyx.com/contact-us"]').first()
     }
     clickTalkToAnExpertButton() {
         this.talkToAnExpertButton().click({force: true})

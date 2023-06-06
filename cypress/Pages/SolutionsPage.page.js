@@ -20,7 +20,7 @@ export default new class SolutionsPage extends MainPage{
         this.seeIndustriesButton().scrollIntoView()
     }
     clickSeeUseCasesButton() {
-        this.seeUseCasesButton().click()
+        this.seeUseCasesButton().click({force: true})
     }
     checkHealthcareButtonVisibility() {
         this.healthcareButton().should('be.visible')
