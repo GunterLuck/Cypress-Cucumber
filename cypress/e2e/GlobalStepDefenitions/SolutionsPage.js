@@ -12,5 +12,5 @@ And('I click on "See use cases" button', () => {
     SolutionsPage.clickSeeUseCasesButton()
 })
 Then('I should see "Account notifications" text and image', () => {
-    SolutionsPage.checkAccountNotificationWindowVisibility
+    SolutionsPage.checkAccountNotificationWindowVisibility()
 })

@@ -11,9 +11,6 @@ class ContactUsPage {
     countryDropdown() {
         return cy.get('[name="Phone_Number_Extension__c"]')
     }
-    canadaOption() {
-        return cy.get('[value="+1"]').contains('Canada (+1)')
-    }
     reasonForContactDropdown() {
         return cy.get('#Reason_for_Contact__c')
     }
