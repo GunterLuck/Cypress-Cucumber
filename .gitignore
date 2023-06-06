@@ -3,4 +3,3 @@ cypress/videos/*
 screenshots/
 allure-results/*
 allure-report/*
-docs/* 
