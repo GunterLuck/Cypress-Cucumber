@@ -4,11 +4,9 @@ This project do https://telnyx.com/ part of the functionality e2e tests on cypre
 
 Allure is used as a reporter in this project.
 
-# Requirement
-
-[Node.js v18.15.0.](https://nodejs.org/en/blog/release/v18.15.0)
-
 # How to start
+
+The project used [Node.js v18.15.0.](https://nodejs.org/en/blog/release/v18.15.0)
 
 Download or clone a project
 
@@ -25,3 +23,5 @@ To run headless test with allure reporter on chrome bowser, call `npm run report
 To check allure results, call `npm run allure:report`
 
 To clean allure-report, call `npm run allure:clear`
+
+To see the results of the allure reporter, click [here](https://gunterluck.github.io/Telnyx-Cypress-Cucumber-Test/)

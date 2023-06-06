@@ -17,6 +17,6 @@ Then('I should see visibility of the "Mission Control Portal" topic text', () =>
 And('I scroll down to the "industry-leading platform" link-button', () => {
     MissionControlPage.scrollToIndustryLeadingLincButton()
 })
-Then('I should see clickability of the "industry-leading platform" link-button', () => {
+Then('I should see visibility of the "industry-leading platform" link-button', () => {
     MissionControlPage.checkIndustryLeadingLincButtonVisibility()
 })
