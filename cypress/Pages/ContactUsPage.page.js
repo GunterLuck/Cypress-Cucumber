@@ -35,12 +35,6 @@ class ContactUsPage {
     howDidYouHearAboutTelnyxField() {
         return cy.get('#How_did_you_hear_about_Telnyx_Open__c')
     }
-    errorMesageText() {
-        return cy.get('#ValidMsgReason_for_Contact__c')
-    }
-    reportAbuseLinkButton() {
-        return cy.get('[href="https://telnyx.com/report-abuse"]>span').first()
-    }
     selectSupportOptionInReasonForContactDropdown() {
         this.reasonForContactDropdown().select('Support', {force: true})
     }

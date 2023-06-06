@@ -23,9 +23,6 @@ export default class MainPage{
     smsApiButton() {
         return cy.get('[href="/products/sms-api"]>span')
     }
-    contactUsButton() {
-        return cy.get('[href="/contact-us"]').first()
-    }
     signUpButton() {
         return cy.get('[id="header-sign-up"]')
     }

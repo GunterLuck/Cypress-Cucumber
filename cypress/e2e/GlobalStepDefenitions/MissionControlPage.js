@@ -1,7 +1,6 @@
 import { Then } from "cypress-cucumber-preprocessor/steps"
 import MissionControlPage from "../../Pages/MissionControlPage.page";
 
-
 Then('I should see visibility of the "Mission Control Portal" topic text', () => {
     let text = 'Mission Control Portal' 
     MissionControlPage.checkTopicTextMaching(text)

@@ -16,9 +16,6 @@ export default new class SolutionsPage extends MainPage{
     clickSeeIndustriesButton() {
         this.seeIndustriesButton().click({force: true})
     }
-    scrollToSeeIndustriesButton() {
-        this.seeIndustriesButton().scrollIntoView()
-    }
     clickSeeUseCasesButton() {
         this.seeUseCasesButton().click({force: true})
     }

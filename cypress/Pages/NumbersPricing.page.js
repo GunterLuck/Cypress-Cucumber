@@ -1,9 +1,6 @@
 const MainPage = require("./MainPage.page")
 
 export default new class NumbersPricing extends MainPage{
-    payAsYouGoText() {
-        return cy.get('h2#pay-as-you-go')
-    }
     payAsYouGoDropdown() {
         return cy.get('div>button[type="button"]')
     }
